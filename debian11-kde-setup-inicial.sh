@@ -1,11 +1,11 @@
 #!/bin/bash
 #
 # Autor: Ricardo Cassiano
-# E-mail: rc.cassiano04@gmail.com
+# E-mail: rc.cassiano04@outlook.com
 #
 # Configurações iniciais do Debian Gnu Linux 11 Kde.
 #
-# 04/07/2022
+# 
 
 
 # Adicionar seções contrib e non-free nos repositórios
@@ -47,7 +47,7 @@ sudo apt-get -y install firmware-{linux,realtek,iwlwifi} libreoffice
 sudo apt-get -y install baobab gnome-disk-utility rdesktop remmina vinagre flameshot \
 cifs-utils firewalld nftables fonts-{noto,cantarell,ubuntu} \
 unrar ttf-mscorefonts-installer gnome-calculator \
-git gitg git-doc vim wget aria2 calculator
+git gitg git-doc vim wget aria2
 
 
 # habilitar o serviço do firewalld e desabilitar alguns serviços
