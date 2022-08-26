@@ -16,8 +16,8 @@
 # Install  Java Language Server from Eclipse package (https://github.com/eclipse/eclipse.jdt.ls)
 
 
-INSTALAR_PACOTE="sudo apt-get -y install"
-REMOVER_PACOTE="sudo apt-get -y remove"
+INSTALL_PACKAGE="sudo apt-get -y install"
+REMOVE_PACKAGE="sudo apt-get -y remove"
 
 
 # Refresh repositories
