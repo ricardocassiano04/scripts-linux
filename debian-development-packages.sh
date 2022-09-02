@@ -3,7 +3,7 @@
 # Autor: Ricardo Cassiano
 # E-mail: rc.cassiano04@gmail.com
 # Github: https://github.com/ricardocassiano04
-# 2022-08-26
+# 
 #
 # Instala alguns pacotes para desenvolvimento
 # de Python e de Java Debian Gnu Linux 11.
@@ -15,7 +15,7 @@
 
 
 INSTALAR_PACOTE="sudo apt-get -y install"
-REMOVER_PACOTE="sudo apt-get -y remove"
+#REMOVER_PACOTE="sudo apt-get -y remove"
 
 
 # Atualizar lista dos repositórios
