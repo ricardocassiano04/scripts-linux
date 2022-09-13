@@ -1,4 +1,4 @@
 # scripts-linux
-Diversos scripts para Linux.
+Many scripts for Linux.
 
 
