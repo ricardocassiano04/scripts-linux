@@ -5,26 +5,19 @@
 # Github: https://github.com/ricardocassiano04
 # 
 #
-# Instala alguns pacotes para desenvolvimento
-# de Python e de Java Debian Gnu Linux 11.
-#
-# 
+# Install some packages for Java, Python and Database
+# development.
 #
 # TODO
-# Instalar  Java Language Server do Eclipse package (https://github.com/eclipse/eclipse.jdt.ls)
+# Install  Java Language Server from Eclipse package (https://github.com/eclipse/eclipse.jdt.ls)
 
-
-INSTALAR_PACOTE="sudo apt-get -y install"
-#REMOVER_PACOTE="sudo apt-get -y remove"
-
-
-# Atualizar lista dos repositórios
 
 sudo apt-get update
 
-# Java e Python
-
-$INSTALAR_PACOTE default-{jdk,jdk-doc} visualvm \
+sudo apt-get -y install default-{jdk,jdk-doc} visualvm \
 python3-{pyls,pyls-black,rope,pyflakes,mccabe,jedi} \
 python3-{pycodestyle,pydocstyle,yapf} pylint flake8 \
-python3-{dev,pip,wheel,rope}
+python3-{dev,pip,wheel,rope} \
+bison flex llvm clang zlib1g-dev \
+lib{ssl,systemd,readline,xslt1,xml2}-dev m4 make autoconf \
+pkgconf flex gcc make guile-2.2-dev patch automake  python3-dev
