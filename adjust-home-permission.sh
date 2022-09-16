@@ -22,4 +22,4 @@ rar png jpeg jpeg zst
 
 for adjust_permissions in "${extensions[@]}"; do
 find $HOME -type f -iname *.$adjust_permissions -exec chmod --change 600 {} \;
-; done
+done
