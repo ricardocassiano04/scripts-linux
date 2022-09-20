@@ -2,8 +2,7 @@
 #
 # Author: Ricardo Cassiano
 #
-# OpenSUSE Tumbleweed Initial Setup
-#
+# Initial setup for OpenSUSE Tumbleweed
 #
 # These are my own setup. Feel free to modify them. 
 
@@ -11,8 +10,6 @@
 touch $HOME/.alias
 
 echo "alias atualizar='sudo zypper -n dup --allow-vendor-change'" >> $HOME/.alias
-
-source $HOME/.alias
 
 echo "export CALIBRE_USE_SYSTEM_THEME=1" | sudo tee -a /etc/environment
 
@@ -32,7 +29,7 @@ sudo rpm --import https://dl.google.com/linux/linux_signing_key.pub
 
 sudo zypper refresh
 
-atualizar
+sudo zypper -n dup --allow-vendor-change
 
 sudo zypper -n in opi
 

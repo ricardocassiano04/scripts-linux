@@ -1,10 +1,7 @@
 #!/bin/bash
 #
-# Autor: Ricardo Cassiano
-# E-mail: rc.cassiano04@gmail.com
-# Github: https://github.com/ricardocassiano04
+# Author: Ricardo Cassiano
 # 
-#
 # Install some packages for Java, Python and Database
 # development.
 #

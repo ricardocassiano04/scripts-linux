@@ -1,7 +1,6 @@
 #!/bin/bash
 #
-# Autor: Ricardo Cassiano
-# E-mail: rc.cassiano04@gmail.com
+# Author: Ricardo Cassiano
 #
 # Install hblock script
 #
@@ -26,6 +25,7 @@ curl -o '/tmp/hblock.#1' 'https://raw.githubusercontent.com/hectorm/hblock/v3.4.
   && sudo systemctl start hblock.timer
 
 
+# Execute hblock script after download
   hblock
 
 

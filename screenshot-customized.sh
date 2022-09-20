@@ -1,16 +1,10 @@
 #!/bin/bash
 #
 # Author: Ricardo Cassiano
-# E-mail: rc.cassiano04@gmail.com
 # 
+# Script to take screenshot by keyboard using KDE Spectacle
+# (configure shortcut in KDE).
 #
-# Script for take screenshot using KDE Spectacle
-# by shortcut (to be configured on KDE).
-# 
-#
-# I have created It to use when I have many screenshots to take.
-#
-
 
 mkdir -p "$HOME"/screenshots
 

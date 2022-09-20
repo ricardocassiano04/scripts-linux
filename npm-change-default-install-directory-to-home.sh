@@ -1,5 +1,7 @@
 #!/bin/bash
 #
+# Author: Ricardo Cassiano
+#
 # Change npm's default directory to $HOME/.npm-packages
 #
 #

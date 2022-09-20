@@ -1,5 +1,7 @@
 #!/bin/bash
 #
+# Author: Ricardo Cassiano
+#
 # Download and build Neovim from # https://github.com/neovim/neovim on Debian/Ubuntu.
 #
 #
