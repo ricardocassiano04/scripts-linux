@@ -2,11 +2,8 @@
 #
 # Author: Ricardo Cassiano
 # 
-# Install some packages for Java, Python and Database
-# development.
+# Install some packages for Java and Python in Debian.
 #
-# TODO
-# Install  Java Language Server from Eclipse package (https://github.com/eclipse/eclipse.jdt.ls)
 
 
 sudo apt-get update

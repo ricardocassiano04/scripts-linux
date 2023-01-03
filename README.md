@@ -11,5 +11,3 @@
 * [opensuse-tumbleweed-initial-setup](https://github.com/ricardocassiano04/scripts-linux/blob/main/opensuse-tumbleweed-initial-setup.sh) - Initial setup for OpenSUSE Tumbleweed.
 * [screenshot-customized](https://github.com/ricardocassiano04/scripts-linux/blob/main/screenshot-customized.sh) - Script to take screenshot by keyboard using [KDE Spectacle](https://apps.kde.org/pt-br/spectacle/) (configure shortcut in [KDE](https://kde.org/)).
 
-
-
