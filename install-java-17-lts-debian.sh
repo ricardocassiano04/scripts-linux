@@ -29,6 +29,6 @@ for update_binaries in "${binaries[@]}"; do sudo update-alternatives --install \
 /usr/bin/"$update_binaries" "$update_binaries" /opt/jdk17/bin/"$update_binaries" 100 && \
 sudo update-alternatives --set "$update_binaries" /opt/jdk17/bin/"$update_binaries"; done
 
-echo "Now Java 17 is the default!"
+echo "Now Java 17 is the system wide default!"
 
 java -version
