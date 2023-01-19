@@ -12,7 +12,7 @@ https://github.com/adoptium/temurin17-binaries/releases
 This script assumes that you have downloaded jdk 17 and 
 moved it to /opt/jdk17 folder.
 
-Now you jdk 17 will be the default java on the system."
+Now your jdk 17 will be the default java on the system."
 
 sleep 2
 
