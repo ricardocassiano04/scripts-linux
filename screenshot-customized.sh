@@ -7,6 +7,7 @@
 # You need to configure a custom shortcut in KDE and add this script.
 #
 
+
 mkdir -p "$HOME"/screenshots
 
 

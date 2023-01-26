@@ -10,4 +10,4 @@
 * [opensuse-development-packages](https://github.com/ricardocassiano04/scripts-linux/blob/main/opensuse-development-packages.sh) - Install some packages for Java, Python and Database development on OpenSUSE Tumbleweed.
 * [opensuse-tumbleweed-initial-setup](https://github.com/ricardocassiano04/scripts-linux/blob/main/opensuse-tumbleweed-initial-setup.sh) - Initial setup for OpenSUSE Tumbleweed.
 * [screenshot-customized](https://github.com/ricardocassiano04/scripts-linux/blob/main/screenshot-customized.sh) - Script to take screenshot by keyboard using [KDE Spectacle](https://apps.kde.org/pt-br/spectacle/) (configure shortcut in [KDE](https://kde.org/)).
-* [configure-eclipse-temurim-java-lts-debian](https://github.com/ricardocassiano04/scripts-linux/blob/main/configure-eclipse-temurim-java-lts-debian) - Script to install [Eclipse Temurin](https://adoptium.net/) OpenJKD on Debian Gnu/Linux 11.
+* [configure-eclipse-temurim-java-lts-debian](https://github.com/ricardocassiano04/scripts-linux/blob/main/configure-eclipse-temurim-java-lts-debian.sh) - Script to install [Eclipse Temurin](https://adoptium.net/) OpenJKD on Debian Gnu/Linux 11.

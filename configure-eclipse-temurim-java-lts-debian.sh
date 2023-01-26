@@ -6,7 +6,7 @@
 #
 
 
-read -p -r "Type your desired jdk version (e.g: 8, 11 , 17): ": VERSION
+read -r -p "Type your desired jdk version (e.g: 8, 11 , 17): " VERSION
 
 
 echo "You can download Eclipse Temurin OpenJDK  binaries here:
@@ -30,8 +30,8 @@ binaries=(
   )
 
 for update_binaries in "${binaries[@]}"; do sudo update-alternatives --install \
-/usr/bin/"$update_binaries" "$update_binaries" /opt/"$VERSION"/bin/"$update_binaries" 100 && \
-sudo update-alternatives --set "$update_binaries" /opt/"$VERSION"/bin/"$update_binaries"; done
+/usr/bin/"$update_binaries" "$update_binaries" /opt/jdk"$VERSION"/bin/"$update_binaries" 100 && \
+sudo update-alternatives --set "$update_binaries" /opt/jdk"$VERSION"/bin/"$update_binaries"; done
 
 echo "Now Java $VERSION is the system wide default!"
 
