@@ -2,9 +2,9 @@
 #
 # Author: Ricardo Cassiano
 # 
-# Script to adjust permissions of $HOME, its subdirectories
+# Script to adjust permissions of user's home folder, its subdirectories
 # and some files with some extensions.
-# It allow only the current user to read/writer $HOME
+# It allow only the current user to have read/writer permissions.
 # 
 
 
