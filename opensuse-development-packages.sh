@@ -3,8 +3,8 @@
 # Author: Ricardo Cassiano
 # 
 #
-# Install some packages for Java, Python and Database
-# development.
+# Installs some packages for development in Java, Python and PostgreSQL 
+# on OpenSUSE Tumbleweed.
 #
 # TODO
 # Install  Java Language Server from Eclipse package (https://github.com/eclipse/eclipse.jdt.ls)
@@ -24,13 +24,13 @@ python310-{yapf,pylint,pip,wheel,virtualenv} \
 ShellCheck lua-language-server \
 mariadb mariadb-tools mariadb-java-client \
 perl-DBD-MariaDB postgresql postgresql-{contrib,devel} \
-postgresql11-{docs,plperl,plpython,server,server-devel} python310-psycopg2 \
+postgresql12-{docs,plperl,plpython,server,server-devel} python310-psycopg2 \
 postgresql-jdbc
 
-# Regardless of the PostgreSQL version chosen. OpenSUSE also installs the latest version.
-# So we need to change the default to version 11.
+# Regardless of the PostgreSQL version chosen, OpenSUSE also installs the latest version.
+# So we need to change the default to version 12.
 
-sudo update-alternatives --set postgresql  /usr/lib/postgresql11
+sudo update-alternatives --set postgresql  /usr/lib/postgresql12
 
 
 
