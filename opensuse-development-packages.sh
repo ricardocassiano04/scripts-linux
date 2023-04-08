@@ -24,13 +24,13 @@ python310-{yapf,pylint,pip,wheel,virtualenv} \
 ShellCheck lua-language-server \
 mariadb mariadb-tools mariadb-java-client \
 perl-DBD-MariaDB postgresql postgresql-{contrib,devel} \
-postgresql12-{docs,plperl,plpython,server,server-devel} python310-psycopg2 \
+postgresql14-{docs,plperl,plpython,server,server-devel} python311-psycopg2 \
 postgresql-jdbc
 
 # Regardless of the PostgreSQL version chosen, OpenSUSE also installs the latest version.
-# So we need to change the default to version 12.
+# So we need to change the default to version 14.
 
-sudo update-alternatives --set postgresql  /usr/lib/postgresql12
+sudo update-alternatives --set postgresql  /usr/lib/postgresql14
 
 
 
