@@ -17,7 +17,8 @@ find "$HOME" -type d -exec chmod --change 700 {} \;
 extensions=(
 sql xls xlsx doc docx \
 py java deb rpm gz tar zip \
-rar png jpeg jpeg zst
+rar png jpeg jpeg zst \
+odt ods odp odg pdf
 )
 
 for adjust_permissions in "${extensions[@]}"; do
