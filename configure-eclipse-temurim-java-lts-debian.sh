@@ -9,30 +9,30 @@
 read -r -p "Type your desired jdk version (e.g: 8, 11 , 17): " VERSION
 
 
-echo "You can download Eclipse Temurin OpenJDK  binaries here:
 
-https://adoptium.net/
+sleep 1
 
-This script assumes that you have downloaded jdk and 
-moved it to /opt/jdk$VERSION folder.
 
-Now your jdk $VERSION will be the default java on the system."
+if test -f /opt/jdk"$VERSION"/bin/java; then
+  binaries=(
+    jar jarsigner java javac javadoc \
+    javap jcmd jconsole jdb jdeprscan \
+    jdeps jfr jhsdb jimage jinfo jlink \
+    jmap jpackage jps jrunscript jshell \
+    jstack jstat jstatd keytool rmiregistry \
+    serialver
+    )
 
-sleep 2
+  for update_binaries in "${binaries[@]}"; do sudo update-alternatives --install \
+  /usr/bin/"$update_binaries" "$update_binaries" /opt/jdk"$VERSION"/bin/"$update_binaries" 100 && \
+  sudo update-alternatives --set "$update_binaries" /opt/jdk"$VERSION"/bin/"$update_binaries"; done
 
-binaries=(
-  jar jarsigner java javac javadoc \
-  javap jcmd jconsole jdb jdeprscan \
-  jdeps jfr jhsdb jimage jinfo jlink \
-  jmap jpackage jps jrunscript jshell \
-  jstack jstat jstatd keytool rmiregistry \
-  serialver
-  )
+  echo "Now Java $VERSION is the system wide default!"
 
-for update_binaries in "${binaries[@]}"; do sudo update-alternatives --install \
-/usr/bin/"$update_binaries" "$update_binaries" /opt/jdk"$VERSION"/bin/"$update_binaries" 100 && \
-sudo update-alternatives --set "$update_binaries" /opt/jdk"$VERSION"/bin/"$update_binaries"; done
-
-echo "Now Java $VERSION is the system wide default!"
-
-java -version
+  java -version
+else
+  echo "
+  Eclipse Temurin OpenJDK $VERSION not found in /opt/jdk$VERSION folder.
+  You may download Eclipse Temurin OpenJDK $VERSION at this link https://adoptium.net/
+  Move it to  /opt/jdk$VERSION folder and then reexecute this script!"
+fi
