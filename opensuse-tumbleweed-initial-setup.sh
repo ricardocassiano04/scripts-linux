@@ -38,5 +38,5 @@ sudo opi codecs
 sudo zypper -n in google-chrome-stable x2goclient krdc kapman noto-sans-fonts noto-sans-mono-fonts \
 mpv smplayer smplayer-themes ubuntu-fonts \
 calibre bibletime kid3 kwave kapman krita gimp kolourpaint git gitg git-doc gcc gcc-c++ m4 bison \
- flex {systemd,openssl,readline,python310}-devel \
+flex {systemd,openssl,readline,python311}-devel \
 clang-devel llvm-devel make cmake neovim 
