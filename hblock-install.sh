@@ -25,9 +25,11 @@ curl -o '/tmp/hblock.#1' 'https://raw.githubusercontent.com/hectorm/hblock/v3.4.
   && sudo systemctl start hblock.timer
 
 
-touch /etc/hblock/allow.list
+sudo mkdir -p /etc/hblock/
 
-touch /etc/hblock/deny.list
+sudo touch /etc/hblock/allow.list
+
+sudo touch /etc/hblock/deny.list
 
 
 # Execute hblock script after download
