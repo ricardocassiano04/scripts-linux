@@ -11,7 +11,9 @@ touch $HOME/.alias
 
 echo "alias atualizar='sudo zypper -n dup --allow-vendor-change'" >> $HOME/.alias
 
-echo "export CALIBRE_USE_SYSTEM_THEME=1" | sudo tee -a /etc/environment
+
+# Since recent versions, this variable is no longer necessary
+#echo "export CALIBRE_USE_SYSTEM_THEME=1" | sudo tee -a /etc/environment
 
 sudo systemctl disable {cups,cups-browsed,saned,bluetooth}
 
