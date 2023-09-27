@@ -6,7 +6,7 @@
 #
 
 
-read -r -p "Type your desired jdk version (e.g: 8, 11 , 17): " VERSION
+read -r -p "Type your desired jdk version (e.g: 17 , 20): " VERSION
 
 
 
