@@ -4,11 +4,9 @@
 # 
 # Script to adjust permissions of user's home folder, its subdirectories
 # and some files with some extensions.
-# It allow only the current user to have read/writer permissions.
+# It makes only the current user to have read/write permissions.
 # 
 
-
-sudo chown  -R "$USER":"$USER" "$HOME"
 
 chmod --change 700 "$HOME"
 
@@ -18,7 +16,8 @@ extensions=(
 sql xls xlsx doc docx \
 py java deb rpm gz tar zip \
 rar png jpeg jpeg zst \
-odt ods odp odg pdf
+odt ods odp odg pdf \
+epub mobi txt
 )
 
 for adjust_permissions in "${extensions[@]}"; do
