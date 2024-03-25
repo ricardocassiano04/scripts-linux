@@ -3,7 +3,7 @@
 # Author: Ricardo Cassiano
 # 
 #
-# Installs some packages for development in Java, Python and PostgreSQL 
+# Installs some packages for development in Java and  Python
 # on OpenSUSE Tumbleweed.
 #
 # TODO
@@ -16,21 +16,15 @@ sudo zypper refresh
 
 
 sudo zypper  -n in \
-java-11-openjdk-{devel,javadoc,jmods,demo} \
-java-1_8_0-openjdk-{devel,javadoc,demo} \
-python310-pylsp-rope python310-{black,python-lsp-black} \
-python310-{flake8,pyflakes,mccabe,jedi,pycodestyle} \
-python310-{yapf,pylint,pip,wheel,virtualenv} \
+java-17-openjdk-{devel,javadoc,jmods,demo} \
+python311-pylsp-rope python310-{black,python-lsp-black} \
+python311-{flake8,pyflakes,mccabe,jedi,pycodestyle} \
+python311-{yapf,pylint,pip,wheel,virtualenv} \
 ShellCheck lua-language-server \
 mariadb mariadb-tools mariadb-java-client \
-perl-DBD-MariaDB postgresql postgresql-{contrib,devel} \
-postgresql14-{docs,plperl,plpython,server,server-devel} python311-psycopg2 \
-postgresql-jdbc
+perl-DBD-MariaDB  python311-psycopg2
 
-# Regardless of the PostgreSQL version chosen, OpenSUSE also installs the latest version.
-# So we need to change the default to version 14.
 
-sudo update-alternatives --set postgresql  /usr/lib/postgresql14
 
 
 
