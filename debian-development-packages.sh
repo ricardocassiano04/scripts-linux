@@ -14,4 +14,5 @@ python3-{pycodestyle,pydocstyle,yapf} pylint flake8 \
 python3-{dev,pip,wheel,rope} \
 bison flex llvm clang zlib1g-dev \
 lib{ssl,systemd,readline,xslt1,xml2}-dev m4 make autoconf \
-pkgconf flex gcc make guile-3.0-dev patch automake  python3-dev
+pkgconf flex gcc make guile-3.0-dev patch automake  python3-dev \
+python3-full
