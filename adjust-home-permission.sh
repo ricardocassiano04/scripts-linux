@@ -17,7 +17,9 @@ sql xls xlsx doc docx \
 py java deb rpm gz tar zip \
 rar png jpeg jpeg zst \
 odt ods odp odg pdf \
-epub mobi txt
+epub mobi txt md \
+json yaml yml \
+csv
 )
 
 for adjust_permissions in "${extensions[@]}"; do
