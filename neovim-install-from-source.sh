@@ -19,12 +19,7 @@ cd neovim || return
 
 git checkout stable
 
-make CMAKE_BUILD_TYPE=Release CMAKE_EXTRA_FLAGS="-DCMAKE_INSTALL_PREFIX=$HOME/apps/neovim"
+make CMAKE_BUILD_TYPE=Release
 make install
-
-tee -a "$HOME"/.profile>>/dev/null<<EOF
-export PATH="$HOME/apps/neovim/bin:$PATH"
-EOF
-
 
 echo "Installation finished!"
