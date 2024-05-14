@@ -2,37 +2,76 @@
 #
 # Author: Ricardo Cassiano
 #
-# Configure Eclipse Temurin OpenJDK on Debian
+# Install and configure Eclipse Temurin OpenJDK on Debian
 #
+# Repository configuration copied from https://adoptium.net/installation/linux/
+#
+# TODO
+# Validate java version
+
 
 
 read -r -p "Type your desired jdk version (e.g: 17 , 20): " VERSION
 
 
+function set_java_alternative {
 
-sleep 1
-
-
-if test -f /opt/jdk"$VERSION"/bin/java; then
   binaries=(
     jar jarsigner java javac javadoc \
     javap jcmd jconsole jdb jdeprscan \
     jdeps jfr jhsdb jimage jinfo jlink \
     jmap jpackage jps jrunscript jshell \
     jstack jstat jstatd keytool rmiregistry \
-    serialver
+    serialver jaotc jexec jjs jmod jspawnhelper 
     )
 
-  for update_binaries in "${binaries[@]}"; do sudo update-alternatives --install \
-  /usr/bin/"$update_binaries" "$update_binaries" /opt/jdk"$VERSION"/bin/"$update_binaries" 100 && \
-  sudo update-alternatives --set "$update_binaries" /opt/jdk"$VERSION"/bin/"$update_binaries"; done
+  for command in "${binaries[@]}"; 
+    do 
+      sudo update-alternatives --install /usr/bin/"${command}" "${command}" /usr/lib/jvm/temurin-"${VERSION}"-jdk-amd64/bin/"${command}" 100 
+      sudo update-alternatives --set "${command}" /usr/lib/jvm/temurin-"${VERSION}"-jdk-amd64/bin/"${command}"; 
+    done
 
-  echo "Now Java $VERSION is the system wide default!"
+  echo "Now Java $VERSION and its components are the system wide default!"
 
   java -version
+
+}
+
+
+sleep 1
+
+
+if test -f /usr/lib/jvm/temurin-"${VERSION}"-jdk-amd64/bin/java; 
+
+then
+
+  set_java_alternative
+
+  
 else
-  echo "
-  Eclipse Temurin OpenJDK $VERSION not found in /opt/jdk$VERSION folder.
-  You may download Eclipse Temurin OpenJDK $VERSION at this link https://adoptium.net/
-  Move it to  /opt/jdk$VERSION folder and then reexecute this script!"
+
+  echo "Eclipse Temurin OpenJDK $VERSION not found. Installing now..."
+
+  sudo apt-get install -y wget apt-transport-https gpg
+
+  wget -qO - https://packages.adoptium.net/artifactory/api/gpg/key/public | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/adoptium.gpg > /dev/null
+
+  echo "deb https://packages.adoptium.net/artifactory/deb $(awk -F= '/^VERSION_CODENAME/{print$2}' /etc/os-release) main" | sudo tee /etc/apt/sources.list.d/adoptium.list
+
+  sudo apt-get update 
+
+  sudo apt-get -y install temurin-"${VERSION}"-jdk
+
+  set_java_alternative
+
 fi
+
+
+
+
+
+
+
+
+
+
