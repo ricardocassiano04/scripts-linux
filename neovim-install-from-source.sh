@@ -1,12 +1,12 @@
 #!/bin/bash
 #
-# Author: Ricardo Cassiano
+# Autor: Ricardo Cassiano
 #
-# Download and build Neovim from # https://github.com/neovim/neovim on Debian/Ubuntu.
+# Download e instala Neovim do repositório  # https://github.com/neovim/neovim  no Debian/Ubuntu.
 #
 #
-# This script is based on  Neovim wiki: https://github.com/neovim/neovim/wiki/Installing-Neovim#install-from-source
-# with a few changes to fit my own needs.
+# Baseado na wiki do Neovim: https://github.com/neovim/neovim/wiki/Installing-Neovim#install-from-source
+# com algumas modificações.
 
 
 sudo apt-get -y install ninja-build gettext libtool libtool-bin \
@@ -22,4 +22,4 @@ git checkout stable
 make CMAKE_BUILD_TYPE=Release
 make install
 
-echo "Installation finished!"
+echo "Instalação finalizada!"

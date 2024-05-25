@@ -1,10 +1,13 @@
 #!/bin/bash
 #
-# Author: Ricardo Cassiano
+# Autor: Ricardo Cassiano
 #
-# Install hblock script
+# Instala o script hblock 
 #
-# from https://github.com/hectorm/hblock
+# Usando os comandos do repositório oficial https://github.com/hectorm/hblock
+# 
+# Script criado apenas para facilitar
+#
 
 
 curl -o /tmp/hblock 'https://raw.githubusercontent.com/hectorm/hblock/v3.4.4/hblock' \

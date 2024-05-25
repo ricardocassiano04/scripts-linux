@@ -1,13 +1,13 @@
 #!/bin/bash
 #
-# Author: Ricardo Cassiano
+# Autor: Ricardo Cassiano
 # 
 #
-# Installs some packages for development in Java and  Python
-# on OpenSUSE Tumbleweed.
+# Instala alguns pacotes para desenvolvimento Java e  Python
+# no OpenSUSE Tumbleweed.
 #
 # TODO
-# Install  Java Language Server from Eclipse package (https://github.com/eclipse/eclipse.jdt.ls)
+# Instalar  Java Language Server do pacote Eclipse (https://github.com/eclipse/eclipse.jdt.ls)
 
 
 

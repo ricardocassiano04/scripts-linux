@@ -1,14 +1,16 @@
 #!/bin/bash
 #
-# Author: Ricardo Cassiano
+# Autor: Ricardo Cassiano
 #
-# Change npm's default directory to $HOME/.npm-packages
+# Muda o repositório padrão dos pacotes npm para  $HOME/.npm-packages
 #
 #
-# This script is based on  npm wiki: http://npm.github.io/installation-setup-docs/installing/a-note-on-permissions.html
-# with a few changes to fit my own needs.
+# Script baseado na wiki do npm: http://npm.github.io/installation-setup-docs/installing/a-note-on-permissions.html
+# com algumas modificações.
+#
+# TODO
+# Verificar se o npm está instalado
 
-echo "Make sure that npm is installed!!"
 
 mkdir -p "$HOME"/.npm-packages
 
@@ -18,4 +20,4 @@ tee -a "$HOME"/.profile>>/dev/null<<EOF
 export PATH="$HOME/.npm-packages/bin:$PATH"
 EOF
 
-echo "Setup finished! In your teminal, you can source ~/.profile or restar your computer to use the new configuration"
+echo "Configuração finalizada. Reinicie o computador para aplicar!"

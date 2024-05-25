@@ -1,8 +1,8 @@
 #!/bin/bash
 #
-# Author: Ricardo Cassiano
+# Autor: Ricardo Cassiano
 # 
-# Install some packages for development in Debian.
+# nstala alguns pacotes para desenvolvemento python no Debian/Ubuntu.
 #
 
 

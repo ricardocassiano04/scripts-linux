@@ -1,10 +1,9 @@
 #!/bin/bash
 #
-# Author: Ricardo Cassiano
+# Autor: Ricardo Cassiano
 #
-# Initial setup for OpenSUSE Tumbleweed
+# Configuração inicial do OpenSUSE Tumbleweed
 #
-# These are my own setup. Feel free to modify them. 
 
 
 touch $HOME/.alias
@@ -34,8 +33,8 @@ sudo zypper -n in opi
 
 sudo opi codecs
 
-sudo zypper -n in google-chrome-stable krdc kapman noto-sans-fonts noto-sans-mono-fonts \
-mpv  ubuntu-fonts calibre bibletime kid3 kwave kapman krita gimp kolourpaint git gitg git-doc \
+sudo zypper -n in google-chrome-stable noto-sans-fonts noto-sans-mono-fonts \
+mpv  ubuntu-fonts calibre bibletime gimp  git gitg git-doc \
 gcc gcc-c++ m4 bison \
 flex {systemd,openssl,readline,python311}-devel \
 clang-devel llvm-devel make cmake neovim 

@@ -1,17 +1,17 @@
 #!/bin/bash
 #
-# Author: Ricardo Cassiano
+# Autor: Ricardo Cassiano
 #
-# Install and configure Eclipse Temurin OpenJDK on Debian
+# Instala e configura o Java OpenJDK do Eclipse Temurin no Debian / Ubuntu.
 #
-# Repository configuration copied from https://adoptium.net/installation/linux/
+# Configuração do repositório baseado no site oficial https://adoptium.net/installation/linux/ (com uma pequena modificação) 
 #
 # TODO
-# Validate java version
+# Validar a versão do java
 
 
 
-read -r -p "Type your desired jdk version (e.g: 17 , 20): " VERSION
+read -r -p "Digite a versão desejada  (exemplo: 8, 17 , 20): " VERSAO
 
 
 function set_java_alternative {
@@ -25,13 +25,13 @@ function set_java_alternative {
     serialver jaotc jexec jjs jmod jspawnhelper 
     )
 
-  for command in "${binaries[@]}"; 
+  for comando in "${binaries[@]}"; 
     do 
-      sudo update-alternatives --install /usr/bin/"${command}" "${command}" /usr/lib/jvm/temurin-"${VERSION}"-jdk-amd64/bin/"${command}" 100 
-      sudo update-alternatives --set "${command}" /usr/lib/jvm/temurin-"${VERSION}"-jdk-amd64/bin/"${command}"; 
+      sudo update-alternatives --install /usr/bin/"${comando}" "${comando}" /usr/lib/jvm/temurin-"${VERSAO}"-jdk-amd64/bin/"${comando}" 100 
+      sudo update-alternatives --set "${comando}" /usr/lib/jvm/temurin-"${VERSAO}"-jdk-amd64/bin/"${comando}"; 
     done
 
-  echo "Now Java $VERSION and its components are the system wide default!"
+  echo "versão $VERSAO configurada como a padrão do sistema!"
 
   java -version
 
@@ -41,7 +41,7 @@ function set_java_alternative {
 sleep 1
 
 
-if test -f /usr/lib/jvm/temurin-"${VERSION}"-jdk-amd64/bin/java; 
+if test -f /usr/lib/jvm/temurin-"${VERSAO}"-jdk-amd64/bin/java; 
 
 then
 
@@ -50,14 +50,13 @@ then
   
 else
 
-  echo "Eclipse Temurin OpenJDK $VERSION not found. Installing now..."
+  echo "Eclipse Temurin OpenJDK $VERSAO não instalada. Instalando agora..."
 
   sudo apt-get install -y wget apt-transport-https gpg
 
   wget -qO - https://packages.adoptium.net/artifactory/api/gpg/key/public | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/adoptium.gpg > /dev/null
   
-  # Get distro codename
-
+  # Ver nome da distro
     if [ "$(grep -E '^ID=' /etc/os-release)" = "ID=linuxmint" ]; then
 	    distro=$(grep -Po '(?<=UBUNTU_CODENAME=)\w+' /etc/os-release)	
     else
@@ -68,7 +67,7 @@ else
 
   sudo apt-get update 
 
-  sudo apt-get -y install temurin-"${VERSION}"-jdk
+  sudo apt-get -y install temurin-"${VERSAO}"-jdk
 
   set_java_alternative
 
