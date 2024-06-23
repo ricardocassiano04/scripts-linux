@@ -11,8 +11,6 @@ touch $HOME/.alias
 echo "alias atualizar='sudo zypper -n dup --allow-vendor-change'" >> $HOME/.alias
 
 
-echo "export CALIBRE_USE_SYSTEM_THEME=1" | sudo tee -a /etc/environment
-
 sudo systemctl disable {cups,cups-browsed,saned,bluetooth}
 
 sudo systemctl stop {cups,cups-browsed,saned,bluetooth}
@@ -35,6 +33,4 @@ sudo opi codecs
 
 sudo zypper -n in google-chrome-stable noto-sans-fonts noto-sans-mono-fonts \
 mpv  ubuntu-fonts calibre bibletime gimp  git gitg git-doc \
-gcc gcc-c++ m4 bison \
-flex {systemd,openssl,readline,python311}-devel \
-clang-devel llvm-devel make cmake neovim 
+neovim python3-neovim meld flameshot
