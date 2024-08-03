@@ -17,7 +17,7 @@ sudo zypper refresh
 
 sudo zypper  -n in \
 java-17-openjdk-{devel,javadoc,jmods,demo} \
-python311-pylsp-rope python310-{black,python-lsp-black} \
+python311-pylsp-rope python311-{black,python-lsp-black} \
 python311-{flake8,pyflakes,mccabe,jedi,pycodestyle} \
 python311-{yapf,pylint,pip,wheel,virtualenv} \
 ShellCheck lua-language-server \
