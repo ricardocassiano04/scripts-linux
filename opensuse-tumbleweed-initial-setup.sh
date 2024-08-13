@@ -4,6 +4,8 @@
 #
 # Configuração inicial do OpenSUSE Tumbleweed
 #
+# Essa configuração é a que uso no meu dia-a-dia.
+# Fique à vontade para modificar segundos suas necessidades
 
 
 touch $HOME/.alias

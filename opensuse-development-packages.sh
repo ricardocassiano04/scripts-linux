@@ -15,7 +15,7 @@ sudo zypper refresh
 
 
 
-sudo zypper  -n in \
+sudo zypper  in \
 java-17-openjdk-{devel,javadoc,jmods,demo} \
 python311-pylsp-rope python311-{black,python-lsp-black} \
 python311-{flake8,pyflakes,mccabe,jedi,pycodestyle} \
