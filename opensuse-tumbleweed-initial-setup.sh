@@ -7,6 +7,8 @@
 # Essa configuração é a que uso no meu dia-a-dia.
 # Fique à vontade para modificar segundos suas necessidades
 
+echo "Script de configuração inicial do OpenSUSE Tumbleweed"
+
 
 touch $HOME/.alias
 
@@ -29,10 +31,18 @@ sudo zypper refresh
 
 sudo zypper -n dup --allow-vendor-change
 
-sudo zypper -n in opi
+read -r -p "Deseja habilitar o repositório Packman? 1 - SIM 0 - NÃO ": RESPOSTA
 
-sudo opi codecs
+if [ "${RESPOSTA}" = 1 ]; then
+    sudo zypper -n in opi
+    sudo opi codecs
+else
+    echo "Você escolheu não configurar o repositório Packman. O script vai seguir com os outros pacotes"
+fi
 
 sudo zypper -n in google-chrome-stable noto-sans-fonts noto-sans-mono-fonts \
 mpv  ubuntu-fonts calibre bibletime gimp  git gitg git-doc \
-neovim python3-neovim meld flameshot
+neovim python3-neovim meld flameshot rclone
+
+
+
