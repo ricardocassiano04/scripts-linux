@@ -36,3 +36,18 @@ sudo opi codecs
 sudo zypper -n in google-chrome-stable noto-sans-fonts noto-sans-mono-fonts \
 mpv  ubuntu-fonts bibletime gimp  git gitg git-doc \
 neovim python3-neovim meld flameshot tmux tilix
+
+
+# Eclipse Temurin JDK
+# Instruções do link oficial https://adoptium.net/installation/linux/
+
+
+# Adiciona o repositório 
+zypper ar -f https://packages.adoptium.net/artifactory/rpm/opensuse/$(. /etc/os-release; echo $VERSION_ID)/$(uname -m) adoptium
+
+
+read -r -p "Digite a versão desejada  (exemplo: 8, 11, 17 , 21): " VERSAO
+
+zypper install temurin-"${VERSAO}"-jdk
+
+
