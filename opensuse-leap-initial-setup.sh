@@ -42,9 +42,11 @@ neovim python3-neovim meld flameshot tmux tilix
 # Instruções do link oficial https://adoptium.net/installation/linux/
 
 
-# Adiciona o repositório 
+# Adiciona o repositório do Eclipse Temurin JDK
+
 zypper ar -f https://packages.adoptium.net/artifactory/rpm/opensuse/$(. /etc/os-release; echo $VERSION_ID)/$(uname -m) adoptium
 
+# Escolher a versão e instalar
 
 read -r -p "Digite a versão desejada  (exemplo: 8, 11, 17 , 21): " VERSAO
 
