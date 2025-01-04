@@ -33,7 +33,9 @@ sudo rpm --import https://dl.google.com/linux/linux_signing_key.pub
 # Eclipse Temurin JDK
 # Instruções do link oficial https://adoptium.net/installation/linux/
 
-sudo zypper ar -f https://packages.adoptium.net/artifactory/rpm/opensuse/$(. /etc/os-release; echo $VERSION_ID)/$(uname -m) adoptium
+# comentado porque ainda não tem disponível para o opensuse leap 15.6
+# https://packages.adoptium.net/ui/native/rpm/opensuse/
+#sudo zypper ar -f https://packages.adoptium.net/artifactory/rpm/opensuse/$(. /etc/os-release; echo $VERSION_ID)/$(uname -m) adoptium
 
 # Atualiza os repositórios
 
