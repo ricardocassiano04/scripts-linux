@@ -9,7 +9,7 @@
 # Ajuste do tema gtk 4  
 
 
-ln -f -s /usr/share/themes/Matcha-dark-azul/gtk-4.0/{gtk.css,gtk-dark.css} ~/.config/gtk-4.0/
+ln -f -s /usr/share/themes/Arc-Dark/gtk-4.0/{gtk.css,gtk-dark.css} ~/.config/gtk-4.0/
 
 
 # Desabilitar tracker no gnome
