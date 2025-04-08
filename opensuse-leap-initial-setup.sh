@@ -28,14 +28,11 @@ sudo zypper addrepo http://download.opensuse.org/repositories/server:/database:/
 
 sudo zypper addrepo http://dl.google.com/linux/chrome/rpm/stable/x86_64 Google-Chrome
 
+sudo zypper ar https://download.videolan.org/SuSE/15.6 VLC
+sudo zypper mr -r VLC
+
 sudo rpm --import https://dl.google.com/linux/linux_signing_key.pub
 
-# Eclipse Temurin JDK
-# Instruções do link oficial https://adoptium.net/installation/linux/
-
-# comentado porque ainda não tem disponível para o opensuse leap 15.6
-# https://packages.adoptium.net/ui/native/rpm/opensuse/
-#sudo zypper ar -f https://packages.adoptium.net/artifactory/rpm/opensuse/$(. /etc/os-release; echo $VERSION_ID)/$(uname -m) adoptium
 
 # Atualiza os repositórios
 
@@ -43,22 +40,51 @@ sudo zypper --gpg-auto-import-keys refresh
 
 # Instala as atualizações
 
-sudo zypper -n dup --allow-vendor-change
-
-# Instala codecs necessários
-
-read -r -p "Deseja habilitar o repositório Packman? 1 - SIM 0 - NÃO ": RESPOSTA
-
-if [ "${RESPOSTA}" = 1 ]; then
-    sudo zypper -n in opi
-    sudo opi codecs
-else
-    echo "Você escolheu não configurar o repositório Packman. O script vai seguir com os outros pacotes"
-fi
-
+sudo zypper dup --allow-vendor-change
 
 # Instala alguns pacotes essenciais
 
-sudo zypper -n in google-chrome-stable noto-sans-fonts noto-sans-mono-fonts \
-mpv  ubuntu-fonts bibletime gimp  git gitg git-doc \
-neovim python3-neovim meld flameshot tmux tilix
+sudo zypper in vlc \
+vlc-codecs \
+vlc-lang \
+libavcodec58_134 \
+libavfilter7_110 \
+libavformat58_76 \
+libavresample4_0 \
+libavutil56_70 \
+libdca0 \
+libfdk-aac2 \
+libopencore-amrnb0 \
+libopencore-amrwb0 \
+libpostproc55_9 \
+libswresample3_9 \
+libswscale5_9 \
+x265 \
+x264 \
+google-chrome-stable \
+noto-sans-fonts \
+noto-sans-mono-fonts \
+mpv  \
+ubuntu-fonts \
+bibletime \
+gimp  \
+git gitg git-doc \
+neovim python3-neovim \
+meld \
+flameshot \
+tmux \
+tilix
+
+
+
+
+
+
+
+
+
+
+
+
+
+
