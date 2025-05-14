@@ -37,6 +37,6 @@ sudo touch /etc/hblock/deny.list
 
 # Execute hblock script after download
 
-hblock
+hblock -c
 
 
