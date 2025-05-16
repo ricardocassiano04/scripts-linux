@@ -55,8 +55,8 @@ fi
 # Instala alguns pacotes essenciais
 
 sudo zypper -n in google-chrome-stable noto-sans-fonts noto-sans-mono-fonts \
-mpv  ubuntu-fonts calibre bibletime gimp  git gitg git-doc \
-neovim python3-neovim meld flameshot rclone
+mpv  ubuntu-fonts calibre bibletime gimp  git git-doc \
+neovim python3-neovim flameshot rclone
 
 
 

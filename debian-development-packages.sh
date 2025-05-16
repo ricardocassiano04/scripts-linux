@@ -2,7 +2,7 @@
 #
 # Autor: Ricardo Cassiano
 # 
-# nstala alguns pacotes para desenvolvemento python no Debian/Ubuntu.
+# Instala alguns pacotes para desenvolvemento python no Debian/Ubuntu.
 #
 
 

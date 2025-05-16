@@ -28,7 +28,7 @@ sudo zypper addrepo http://download.opensuse.org/repositories/server:/database:/
 
 sudo zypper addrepo http://dl.google.com/linux/chrome/rpm/stable/x86_64 Google-Chrome
 
-sudo zypper ar https://download.videolan.org/SuSE/15.6 VLC
+sudo zypper ar https://download.videolan.org/SuSE/Tumbleweed VLC
 sudo zypper mr -r VLC
 
 sudo rpm --import https://dl.google.com/linux/linux_signing_key.pub

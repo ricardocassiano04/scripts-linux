@@ -11,7 +11,7 @@
 
 
 
-read -r -p "Digite a versão desejada  (exemplo: 8, 17 , 20): " VERSAO
+read -r -p "Digite a versão desejada  (exemplo: 8, 11, 17 , 21): " VERSAO
 
 
 function set_java_alternative {
