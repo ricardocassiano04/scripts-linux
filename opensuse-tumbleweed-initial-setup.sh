@@ -33,6 +33,10 @@ sudo zypper addrepo http://dl.google.com/linux/chrome/rpm/stable/x86_64 Google-C
 
 sudo rpm --import https://dl.google.com/linux/linux_signing_key.pub
 
+sudo zypper ar https://download.videolan.org/SuSE/Tumbleweed VLC
+sudo zypper mr -r VLC
+
+
 # Atualiza os repositórios
 
 sudo zypper --gpg-auto-import-keys refresh
@@ -41,22 +45,40 @@ sudo zypper --gpg-auto-import-keys refresh
 
 sudo zypper -n dup --allow-vendor-change
 
-# Instala codecs necessários
-
-read -r -p "Deseja habilitar o repositório Packman? 1 - SIM 0 - NÃO ": RESPOSTA
-
-if [ "${RESPOSTA}" = 1 ]; then
-    sudo zypper -n in opi
-    sudo opi codecs
-else
-    echo "Você escolheu não configurar o repositório Packman. O script vai seguir com os outros pacotes"
-fi
 
 # Instala alguns pacotes essenciais
 
-sudo zypper -n in google-chrome-stable noto-sans-fonts noto-sans-mono-fonts \
-mpv  ubuntu-fonts calibre bibletime gimp  git git-doc \
-neovim python3-neovim flameshot rclone
+sudo zypper in vlc \
+vlc-codecs \
+vlc-lang \
+x265 \
+x264 \
+google-chrome-stable \
+noto-sans-fonts \
+noto-sans-mono-fonts \
+mpv  \
+ubuntu-fonts \
+bibletime \
+gimp  \
+git gitg git-doc \
+neovim python313-neovim \
+meld \
+flameshot \
+tmux \
+tilix \
+geany geany-plugins \
+zenith
+
+
+
+
+
+
+
+
+
+
+
 
 
 
