@@ -28,7 +28,7 @@ sudo zypper addrepo http://download.opensuse.org/repositories/server:/database:/
 
 sudo zypper addrepo http://dl.google.com/linux/chrome/rpm/stable/x86_64 Google-Chrome
 
-sudo zypper ar https://download.videolan.org/SuSE/Tumbleweed VLC
+sudo zypper ar https://download.videolan.org/SuSE/15.6 VLC
 sudo zypper mr -r VLC
 
 sudo rpm --import https://dl.google.com/linux/linux_signing_key.pub
@@ -47,18 +47,6 @@ sudo zypper dup --allow-vendor-change
 sudo zypper in vlc \
 vlc-codecs \
 vlc-lang \
-libavcodec58_134 \
-libavfilter7_110 \
-libavformat58_76 \
-libavresample4_0 \
-libavutil56_70 \
-libdca0 \
-libfdk-aac2 \
-libopencore-amrnb0 \
-libopencore-amrwb0 \
-libpostproc55_9 \
-libswresample3_9 \
-libswscale5_9 \
 x265 \
 x264 \
 google-chrome-stable \
@@ -69,11 +57,13 @@ ubuntu-fonts \
 bibletime \
 gimp  \
 git gitg git-doc \
-neovim python3-neovim \
+neovim python313-neovim \
 meld \
 flameshot \
 tmux \
-tilix
+tilix \
+geany geany-plugins \
+zenith
 
 
 
