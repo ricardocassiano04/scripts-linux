@@ -25,10 +25,6 @@ sudo systemctl stop {cups,cups-browsed,saned,bluetooth}
 
 # Adiciona repositórios da Mozilla, do Google Chrome e do PostgreSQL
 
-sudo zypper addrepo http://download.opensuse.org/repositories/mozilla/openSUSE_Tumbleweed/ Mozilla
-
-sudo zypper addrepo http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Tumbleweed/ PostgreSQL
-
 sudo zypper addrepo http://dl.google.com/linux/chrome/rpm/stable/x86_64 Google-Chrome
 
 sudo rpm --import https://dl.google.com/linux/linux_signing_key.pub
