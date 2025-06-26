@@ -110,7 +110,12 @@ lynis nmap rkhunter firewalld nftables \
 pdftk flameshot qt5ct qt6ct \
 adwaita-qt adwaita-qt6 \
 shotcut gimp obs-studio \
-sox lame twolame strawberry
+sox lame twolame strawberry \
+git calibre exiftool tmux tilix \
+rsync meld webhttrack
+
+
+sudo systemctl enable {nftables,firewalld}
 
 
 # Configurar tema dos apps qt
@@ -121,7 +126,7 @@ Após reiniciar o sistema, utilize o qt5ct q qt6ct para configurar temas e fonte
 
 sleep 2
 
-sudo tee -a /etc/environment>>/dev/null<<EOF
+tee -a $HOME/.profile>>/dev/null<<EOF
 
 export QT_QPA_PLATFORMTHEME=qt5ct
 
