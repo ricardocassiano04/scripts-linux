@@ -35,6 +35,15 @@ sudo touch /etc/hblock/allow.list
 sudo touch /etc/hblock/deny.list
 
 
+sudo tee -a /etc/hblock/allow.list>>/dev/null<<EOF
+
+duckduckgo.com
+mail.google.com
+
+
+EOF
+
+
 # Execute hblock script after download
 
 hblock -c
