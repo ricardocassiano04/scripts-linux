@@ -9,4 +9,4 @@
 * [npm-change-default-install-directory-to-home](https://github.com/ricardocassiano04/scripts-linux/blob/main/npm-change-default-install-directory-to-home.sh) - Altera a pasta padrão dos pacotes npm para $HOME/.npm-packages
 * [opensuse-development-packages](https://github.com/ricardocassiano04/scripts-linux/blob/main/opensuse-development-packages.sh) - Instala alguns pacotes para desenvolvimento Java, Python e banco de dados PostgreSQL no OpenSUSE Tumbleweed.
 * [opensuse-tumbleweed-initial-setup](https://github.com/ricardocassiano04/scripts-linux/blob/main/opensuse-tumbleweed-initial-setup.sh) - Configurações iniciais do OpenSUSE Tumbleweed.
-* [configure-eclipse-temurim-java-lts-debian](https://github.com/ricardocassiano04/scripts-linux/blob/main/configure-eclipse-temurim-java-lts-debian.sh) - Instala o Java OpenJDK do [Eclipse Temurin](https://adoptium.net/) no Debian 11+ / Ubuntu 22.04+.
+* [configure-eclipse-temurim-java-lts-debian](https://github.com/ricardocassiano04/scripts-linux/blob/main/configure-eclipse-temurim-java-lts-debian.sh) - Instala o Java OpenJDK do [Eclipse Temurin](https://adoptium.net/) no Debian 12+ / Ubuntu 24.04+.
