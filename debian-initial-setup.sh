@@ -112,7 +112,8 @@ adwaita-qt adwaita-qt6 \
 shotcut gimp obs-studio \
 sox lame twolame strawberry \
 git calibre exiftool tmux tilix \
-rsync meld webhttrack
+rsync meld webhttrack \
+fonts-firacode bibata-cursor-theme
 
 
 sudo systemctl enable {nftables,firewalld}
