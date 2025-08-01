@@ -1,6 +1,9 @@
 # scripts-linux
 
-## Vários scripts for Linux.
+## Vários scripts para Linux.
+
+Scripts que utilizo no dia a dia para facilitar várias tarefas repetitivas. 
+
 
 * [adjust-home-permission](https://github.com/ricardocassiano04/scripts-linux/blob/main/adjust-home-permission.sh)  - Script para ajustar as permissões da pasta $HOME e alguns tipos de arquivo. Ele remove a permissão de leitura para outros.
 * [debian-development-packages](https://github.com/ricardocassiano04/scripts-linux/blob/main/debian-development-packages.sh) - Instala alguns pacotes para desenvolvemento python no Debian/Ubuntu.
@@ -10,3 +13,4 @@
 * [opensuse-development-packages](https://github.com/ricardocassiano04/scripts-linux/blob/main/opensuse-development-packages.sh) - Instala alguns pacotes para desenvolvimento Java, Python e banco de dados PostgreSQL no OpenSUSE Tumbleweed.
 * [opensuse-tumbleweed-initial-setup](https://github.com/ricardocassiano04/scripts-linux/blob/main/opensuse-tumbleweed-initial-setup.sh) - Configurações iniciais do OpenSUSE Tumbleweed.
 * [configure-eclipse-temurim-java-lts-debian](https://github.com/ricardocassiano04/scripts-linux/blob/main/configure-eclipse-temurim-java-lts-debian.sh) - Instala o Java OpenJDK do [Eclipse Temurin](https://adoptium.net/) no Debian 12+ / Ubuntu 24.04+.
+* [install-mint-theme](https://github.com/ricardocassiano04/scripts-linux/blob/main/install-mint-theme.sh) - Instala os temas do Linux Mint direto do Github no Debian 12+.
