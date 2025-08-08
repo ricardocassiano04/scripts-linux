@@ -30,3 +30,8 @@ csv
 for mudar_permissao in "${tipo_arquivo[@]}"; do
 find "$HOME" -type f -iname "*.$mudar_permissao" -exec chmod --change 600 {} \;
 done
+
+
+# Ajustar o umask
+
+sudo chfn -o "umask=0027" $USER
