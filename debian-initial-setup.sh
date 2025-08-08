@@ -114,7 +114,8 @@ sox lame twolame strawberry \
 git calibre exiftool tmux tilix \
 rsync meld webhttrack \
 fonts-firacode bibata-cursor-theme \
-libpam-tmpdir apt-listbugs fail2ban needrestart
+libpam-tmpdir apt-listbugs fail2ban needrestart \
+qalculate-gtk 
 
 
 sudo systemctl enable {nftables,firewalld}
