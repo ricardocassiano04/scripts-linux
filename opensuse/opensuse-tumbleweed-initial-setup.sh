@@ -23,7 +23,7 @@ sudo systemctl disable {cups,cups-browsed,saned,bluetooth}
 sudo systemctl stop {cups,cups-browsed,saned,bluetooth}
 
 
-# Adiciona repositórios da Mozilla, do Google Chrome e do PostgreSQL
+# Adiciona repositórios do Google Chrome e do PostgreSQL
 
 sudo zypper addrepo http://dl.google.com/linux/chrome/rpm/stable/x86_64 Google-Chrome
 
