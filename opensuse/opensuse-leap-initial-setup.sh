@@ -22,13 +22,13 @@ sudo systemctl stop {cups,cups-browsed,saned,bluetooth}
 
 # Adiciona repositórios da Mozilla, do Google Chrome, do JDK do Eclipse Temurin e do PostgreSQL
 
-sudo zypper addrepo http://download.opensuse.org/repositories/mozilla/openSUSE_Leap_15.6/ Mozilla
+#sudo zypper addrepo http://download.opensuse.org/repositories/mozilla/openSUSE_Leap_15.6/ Mozilla # Ainda não há repositório para o Leap 16.0
 
-sudo zypper addrepo http://download.opensuse.org/repositories/server:/database:/postgresql/15.6/ PostgreSQL
+#sudo zypper addrepo http://download.opensuse.org/repositories/server:/database:/postgresql/15.6/ PostgreSQL # Ainda não há repositório para o Leap 16.0
 
 sudo zypper addrepo http://dl.google.com/linux/chrome/rpm/stable/x86_64 Google-Chrome
 
-sudo zypper ar https://download.videolan.org/SuSE/15.6 VLC
+sudo zypper ar https://download.videolan.org/SuSE/16.0 VLC
 sudo zypper mr -r VLC
 
 sudo rpm --import https://dl.google.com/linux/linux_signing_key.pub
