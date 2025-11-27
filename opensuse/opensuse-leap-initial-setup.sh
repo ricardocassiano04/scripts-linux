@@ -2,7 +2,7 @@
 #
 # Autor: Ricardo Cassiano
 #
-# Configuração inicial do OpenSUSE Leap
+# Configuração inicial do OpenSUSE Leap 16
 #
 # Essa configuração é a que uso no meu dia-a-dia.
 # Fique à vontade para modificar segundos suas necessidades
@@ -20,11 +20,11 @@ sudo systemctl disable {cups,cups-browsed,saned,bluetooth}
 
 sudo systemctl stop {cups,cups-browsed,saned,bluetooth}
 
-# Adiciona repositórios da Mozilla, do Google Chrome, do JDK do Eclipse Temurin e do PostgreSQL
+# Adiciona repositórios da Mozilla, do Google Chrome e do PostgreSQL
 
-#sudo zypper addrepo http://download.opensuse.org/repositories/mozilla/openSUSE_Leap_15.6/ Mozilla # Ainda não há repositório para o Leap 16.0
+sudo zypper addrepo http://download.opensuse.org/repositories/mozilla/16.0/ Mozilla
 
-#sudo zypper addrepo http://download.opensuse.org/repositories/server:/database:/postgresql/15.6/ PostgreSQL # Ainda não há repositório para o Leap 16.0
+sudo zypper addrepo http://download.opensuse.org/repositories/server:/database:/postgresql/16.0/ PostgreSQL
 
 sudo zypper addrepo http://dl.google.com/linux/chrome/rpm/stable/x86_64 Google-Chrome
 
@@ -63,7 +63,8 @@ flameshot \
 tmux \
 tilix \
 geany geany-plugins \
-zenith
+zenith \
+flameshot
 
 
 
