@@ -12,7 +12,7 @@
 
 touch $HOME/.alias
 
-echo "alias atualizar='sudo zypper -n dup --allow-vendor-change'" >> $HOME/.alias
+echo "alias atualizar='sudo zypper dup --allow-vendor-change'" >> $HOME/.alias
 
 # Desabilita o cups, saned e o bluetooth
 
@@ -42,6 +42,15 @@ sudo zypper --gpg-auto-import-keys refresh
 
 sudo zypper dup --allow-vendor-change
 
+
+# Instalar e configurar flatpak
+# https://flatpak.org/setup/openSUSE
+
+sudo zypper -n install flatpak
+
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+
 # Instala alguns pacotes essenciais
 
 sudo zypper in vlc \
@@ -54,7 +63,7 @@ noto-sans-fonts \
 noto-sans-mono-fonts \
 mpv  \
 ubuntu-fonts \
-bibletime \
+qalculate-gtk \
 gimp  \
 git gitg git-doc \
 neovim python313-neovim \
