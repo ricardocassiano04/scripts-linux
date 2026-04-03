@@ -2,7 +2,7 @@
 #
 # Autor: Ricardo Cassiano
 # 
-# Configurações iniciais do Linux Debian 12 trixie
+# Configurações iniciais do Linux Debian 13 Trixie
 #
 
 
@@ -147,7 +147,7 @@ git calibre exiftool tmux tilix \
 rsync meld webhttrack \
 fonts-firacode bibata-cursor-theme \
 libpam-tmpdir apt-listbugs fail2ban needrestart \
-qalculate-gtk 
+qalculate-gtk bat gping pandoc ncdu
 
 
 sudo systemctl enable {nftables,firewalld}
