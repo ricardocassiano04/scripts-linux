@@ -48,25 +48,12 @@ sudo dnf update -y
 
 sudo dnf -y install langpacks-core-pt_BR langpacks-pt_BR \
 glibc-langpack-pt libreoffice libreoffice-langpack-pt-BR \
-vlc qt5ct qt6ct tmux neovim x265 sox lame twolame gimp \
+vlc tmux neovim x265 sox lame twolame gimp \
 meld geany flameshot rclone rsync lynis calibre
 
 
 
 
-# Configurar tema dos apps qt
-
-echo "Configurando a variável de ambiente QT_QPA_PLATFORMTHEME.
-Após reiniciar o sistema, utilize o qt5ct q qt6ct para configurar temas e fontes.
-"
-
-sleep 2
-
-tee -a $HOME/.profile>>/dev/null<<EOF
-
-export QT_QPA_PLATFORMTHEME=qt5ct
-
-EOF
 
 
 echo "Finalizado!!!"
