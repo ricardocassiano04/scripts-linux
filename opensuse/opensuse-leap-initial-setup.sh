@@ -22,7 +22,13 @@ sudo systemctl stop {cups,cups-browsed,saned,bluetooth}
 
 # Adiciona repositórios da Mozilla, do Google Chrome e do PostgreSQL
 
-sudo zypper addrepo http://download.opensuse.org/repositories/mozilla/16.0/ Mozilla
+#sudo zypper addrepo http://download.opensuse.org/repositories/mozilla/16.0/ Mozilla
+
+sudo rpm --import https://packages.mozilla.org/rpm/firefox/signing-key.gpg
+sudo zypper ar --gpgcheck-allow-unsigned-repo -p 10 https://packages.mozilla.org/rpm/firefox mozilla
+sudo zypper refresh
+sudo zypper install firefox
+
 
 sudo zypper addrepo http://download.opensuse.org/repositories/server:/database:/postgresql/16.0/ PostgreSQL
 
@@ -32,6 +38,9 @@ sudo zypper ar https://download.videolan.org/SuSE/16.0 VLC
 sudo zypper mr -r VLC
 
 sudo rpm --import https://dl.google.com/linux/linux_signing_key.pub
+
+
+
 
 
 # Atualiza os repositórios
