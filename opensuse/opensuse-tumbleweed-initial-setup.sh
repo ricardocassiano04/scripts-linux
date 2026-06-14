@@ -13,14 +13,8 @@ echo "Script de configuração inicial do OpenSUSE Tumbleweed"
 
 touch $HOME/.alias
 
-echo "alias atualizar='sudo zypper -n dup --allow-vendor-change'" >> $HOME/.alias
+echo "alias atualizar='sudo zypper dup --allow-vendor-change'" >> $HOME/.alias
 
-
-# Desabilita o cups, saned e o bluetooth
-
-sudo systemctl disable {cups,cups-browsed,saned,bluetooth}
-
-sudo systemctl stop {cups,cups-browsed,saned,bluetooth}
 
 
 # Adiciona repositórios do Google Chrome e do PostgreSQL
@@ -28,6 +22,8 @@ sudo systemctl stop {cups,cups-browsed,saned,bluetooth}
 sudo zypper addrepo http://dl.google.com/linux/chrome/rpm/stable/x86_64 Google-Chrome
 
 sudo rpm --import https://dl.google.com/linux/linux_signing_key.pub
+
+sudo zypper addrepo http://download.opensuse.org/repositories/mozilla/openSUSE_Tumbleweed/ Mozilla
 
 sudo zypper ar https://download.videolan.org/SuSE/Tumbleweed VLC
 sudo zypper mr -r VLC
@@ -56,14 +52,13 @@ mpv  \
 ubuntu-fonts \
 bibletime \
 gimp  \
-git gitg git-doc \
+git  git-doc \
 neovim python313-neovim \
 meld \
 flameshot \
 tmux \
 tilix \
-geany geany-plugins \
-zenith
+geany geany-plugins
 
 
 
