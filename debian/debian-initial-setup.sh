@@ -6,7 +6,6 @@
 #
 
 
-
 ### Configurar repositórios e instalar atualizações do sistema
 # https://wiki.debian.org/SourcesList
 
@@ -16,9 +15,9 @@ echo "Esse script é apenas para testes/estudos! Use por sua própria conta e ri
 sleep 3
 
 
-sudo mv /etc/apt/source.list /etc/apt/source.list.backup
+sudo mv /etc/apt/sources.list /etc/apt/sources.list.backup
 
-sudo tee -a /etc/apt/source.list.d/debian.list>>/dev/null<<EOF
+sudo tee -a /etc/apt/sources.list.d/debian.list>>/dev/null<<EOF
 
 deb https://deb.debian.org/debian trixie main non-free-firmware
 deb-src https://deb.debian.org/debian trixie main non-free-firmware
@@ -134,44 +133,26 @@ echo "Instalar alguns pacotes essenciais"
 sudo apt-get -y install \
 vlc \
 x265 x264 ffmpeg mpv celluloid \
-calibre evince file-roller \
-meld vim eog \
-baobab foliate gnome-calculator \
-htop dconf-editor yaru-theme-{gtk,icon} \
-lynis nmap rkhunter firewalld nftables \
-pdftk flameshot qt5ct qt6ct \
-adwaita-qt adwaita-qt6 \
+calibre \
+meld vim \
+htop lynis nmap rkhunter firewalld nftables \
+pdftk flameshot  \
 shotcut gimp obs-studio \
 sox lame twolame strawberry \
-git calibre exiftool tmux tilix \
+git exiftool tmux tilix \
 rsync meld webhttrack \
 fonts-firacode bibata-cursor-theme \
 libpam-tmpdir apt-listbugs fail2ban needrestart \
-qalculate-gtk bat gping pandoc ncdu
+qalculate-qt bat gping pandoc ncdu
 
 
 sudo systemctl enable {nftables,firewalld}
 
 
-# Configurar tema dos apps qt
-
-echo "Configurando a variável de ambiente QT_QPA_PLATFORMTHEME.
-Após reiniciar o sistema, utilize o qt5ct q qt6ct para configurar temas e fontes.
-"
-
-sleep 2
-
-tee -a $HOME/.profile>>/dev/null<<EOF
-
-export QT_QPA_PLATFORMTHEME=qt5ct
-
-EOF
-
-
 
 ### Instalar alguns pacotes do backports
 
-sudo apt-get -y -t trixie-backports install libreoffice yt-dlp
+sudo apt-get -y -t trixie-backports install libreoffice
 
 
 
