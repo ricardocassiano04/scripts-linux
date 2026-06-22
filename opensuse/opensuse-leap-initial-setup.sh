@@ -14,15 +14,7 @@ touch $HOME/.alias
 
 echo "alias atualizar='sudo zypper dup --allow-vendor-change'" >> $HOME/.alias
 
-# Desabilita o cups, saned e o bluetooth
-
-sudo systemctl disable {cups,cups-browsed,saned,bluetooth}
-
-sudo systemctl stop {cups,cups-browsed,saned,bluetooth}
-
 # Adiciona repositórios da Mozilla, do Google Chrome e do PostgreSQL
-
-#sudo zypper addrepo http://download.opensuse.org/repositories/mozilla/16.0/ Mozilla
 
 sudo rpm --import https://packages.mozilla.org/rpm/firefox/signing-key.gpg
 sudo zypper ar --gpgcheck-allow-unsigned-repo -p 10 https://packages.mozilla.org/rpm/firefox mozilla
@@ -63,7 +55,6 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 # Instala alguns pacotes essenciais
 
 sudo zypper in vlc \
-vlc-codecs \
 vlc-lang \
 x265 \
 x264 \
@@ -72,9 +63,9 @@ noto-sans-fonts \
 noto-sans-mono-fonts \
 mpv  \
 ubuntu-fonts \
-qalculate-gtk \
+qalculate-qt \
 gimp  \
-git gitg git-doc \
+git git-doc \
 neovim python313-neovim \
 meld \
 flameshot \
@@ -82,7 +73,8 @@ tmux \
 tilix \
 geany geany-plugins \
 zenith \
-flameshot
+flameshot \
+ksnip
 
 
 

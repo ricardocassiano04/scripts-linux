@@ -41,7 +41,6 @@ sudo zypper -n dup --allow-vendor-change
 # Instala alguns pacotes essenciais
 
 sudo zypper in vlc \
-vlc-codecs \
 vlc-lang \
 x265 \
 x264 \
@@ -49,6 +48,7 @@ google-chrome-stable \
 noto-sans-fonts \
 noto-sans-mono-fonts \
 mpv  \
+qalculate-qt \
 ubuntu-fonts \
 bibletime \
 gimp  \
@@ -58,7 +58,8 @@ meld \
 flameshot \
 tmux \
 tilix \
-geany geany-plugins
+geany geany-plugins \
+ksnip
 
 
 
