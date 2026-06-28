@@ -20,3 +20,5 @@ sudo gpg --yes --output /usr/share/keyrings/oracle-virtualbox-2016.gpg --dearmor
 sudo apt-get update 
 
 sudo apt-get install virtualbox-7.2
+
+sudo usermod -aG vboxusers $USER
