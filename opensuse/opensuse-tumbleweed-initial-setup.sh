@@ -36,6 +36,14 @@ sudo zypper --gpg-auto-import-keys refresh
 sudo zypper -n dup --allow-vendor-change
 
 
+# Instalar e configurar flatpak
+# https://flatpak.org/setup/openSUSE
+
+sudo zypper -n install flatpak
+
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+
 # Instala alguns pacotes essenciais
 
 sudo zypper in opi \
