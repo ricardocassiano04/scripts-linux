@@ -25,8 +25,6 @@ sudo rpm --import https://dl.google.com/linux/linux_signing_key.pub
 
 sudo zypper addrepo http://download.opensuse.org/repositories/mozilla/openSUSE_Tumbleweed/ Mozilla
 
-sudo zypper ar https://download.videolan.org/SuSE/Tumbleweed VLC
-sudo zypper mr -r VLC
 
 
 # Atualiza os repositórios
@@ -40,10 +38,7 @@ sudo zypper -n dup --allow-vendor-change
 
 # Instala alguns pacotes essenciais
 
-sudo zypper in vlc \
-vlc-lang \
-x265 \
-x264 \
+sudo zypper in opi \
 google-chrome-stable \
 noto-sans-fonts \
 noto-sans-mono-fonts \
@@ -62,6 +57,11 @@ geany geany-plugins \
 ksnip
 
 
+# Adicionar o repositório do packman
+
+echo "Adicionar o repositório do packman. Essa parte é mais interativa!!"
+
+sudo opi codecs
 
 
 
