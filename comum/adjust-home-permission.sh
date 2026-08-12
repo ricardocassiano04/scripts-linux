@@ -24,14 +24,11 @@ rar png jpeg jpeg zst \
 odt ods odp odg pdf \
 epub mobi txt md \
 json yaml yml \
-csv
+csv tom mp3 opus \
+aup3 
 )
 
 for mudar_permissao in "${tipo_arquivo[@]}"; do
 find "$HOME" -type f -iname "*.$mudar_permissao" -exec chmod --change 600 {} \;
 done
 
-
-# Ajustar o umask
-
-sudo chfn -o "umask=0027" $USER
