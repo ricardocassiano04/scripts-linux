@@ -42,17 +42,18 @@ sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-releas
 sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1
 
 
+# Habilitando o repositório do google-chrome
+sudo dnf config-manager setopt google-chrome.enabled=1
+
+
 echo "Instalando as atualizações e alguns pacotes essenciais"
 
 sudo dnf update -y
 
 sudo dnf -y install langpacks-core-pt_BR langpacks-pt_BR \
 glibc-langpack-pt libreoffice libreoffice-langpack-pt-BR \
-vlc tmux neovim x265 sox lame twolame gimp \
-meld geany flameshot rclone rsync lynis calibre
-
-
-
+vlc tmux neovim x265 x264 sox lame twolame gimp google-chrome-stable \
+meld geany ksnip rclone rsync lynis calibre mpv --allowerasing --skip-unavailable
 
 
 
