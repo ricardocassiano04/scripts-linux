@@ -19,6 +19,11 @@ echo "alias atualizar='sudo zypper dup --allow-vendor-change'" >> $HOME/.alias
 sudo rpm --import https://packages.mozilla.org/rpm/firefox/signing-key.gpg
 sudo zypper ar --gpgcheck-allow-unsigned-repo -p 10 https://packages.mozilla.org/rpm/firefox mozilla
 sudo zypper refresh
+
+# Remover versão antiga do Firefox e instalar a nova
+
+sudo zypper remove MozillaFirefox MozillaFirefox*
+
 sudo zypper install firefox
 
 
@@ -30,7 +35,8 @@ sudo zypper addrepo http://dl.google.com/linux/chrome/rpm/stable/x86_64 Google-C
 sudo rpm --import https://dl.google.com/linux/linux_signing_key.pub
 
 
-
+sudo zypper ar https://download.videolan.org/SuSE/16.0 VLC
+sudo zypper mr -r VLC
 
 # Atualiza os repositórios
 
@@ -51,12 +57,11 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 
 # Instala alguns pacotes essenciais
 
-sudo zypper in opi \
+sudo zypper in  \
 google-chrome-stable \
 noto-sans-fonts \
 noto-sans-mono-fonts \
 mpv  \
-ubuntu-fonts \
 qalculate-qt \
 gimp  \
 git git-doc \
@@ -73,11 +78,10 @@ htop
 
 
 
-# Adicionar o repositório do packman
 
-echo "Adicionar o repositório do packman. Essa parte é mais interativa!!"
+echo "Script finalizado!!"
 
-sudo opi codecs
+
 
 
 
