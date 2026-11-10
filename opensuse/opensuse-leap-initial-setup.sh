@@ -22,9 +22,9 @@ sudo zypper refresh
 
 # Remover versão antiga do Firefox e instalar a nova
 
-sudo zypper remove MozillaFirefox MozillaFirefox*
+sudo zypper -n remove MozillaFirefox MozillaFirefox*
 
-sudo zypper install firefox
+sudo zypper -n install firefox
 
 
 sudo zypper addrepo http://download.opensuse.org/repositories/server:/database:/postgresql/16.0/ PostgreSQL
@@ -33,6 +33,8 @@ sudo zypper addrepo http://dl.google.com/linux/chrome/rpm/stable/x86_64 Google-C
 
 
 sudo rpm --import https://dl.google.com/linux/linux_signing_key.pub
+
+sudo zypper addrepo https://download.opensuse.org/repositories/LibreOffice:/Factory/openSUSE_Leap_16.0/ Libreoffice
 
 
 sudo zypper ar https://download.videolan.org/SuSE/16.0 VLC
@@ -44,20 +46,18 @@ sudo zypper --gpg-auto-import-keys refresh
 
 # Instala as atualizações
 
-sudo zypper dup --allow-vendor-change
+sudo zypper -n dup --allow-vendor-change
 
 
-# Instalar e configurar flatpak
+# Instalar e configurar flatpak e adicionar o flathub
 # https://flatpak.org/setup/openSUSE
 
-sudo zypper -n install flatpak
-
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+sudo zypper -n install flatpak flatpak-remote-flathub
 
 
 # Instala alguns pacotes essenciais
 
-sudo zypper in  \
+sudo zypper -n install  \
 google-chrome-stable \
 noto-sans-fonts \
 noto-sans-mono-fonts \
@@ -70,7 +70,7 @@ meld \
 flameshot \
 tmux \
 tilix \
-geany geany-plugins \
+geany  \
 zenith \
 flameshot \
 ksnip \
