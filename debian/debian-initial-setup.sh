@@ -142,7 +142,6 @@ sox lame twolame strawberry \
 git exiftool tmux tilix \
 rsync meld webhttrack \
 fonts-firacode bibata-cursor-theme \
-libpam-tmpdir apt-listbugs fail2ban needrestart \
 qalculate-qt bat gping pandoc ncdu
 
 

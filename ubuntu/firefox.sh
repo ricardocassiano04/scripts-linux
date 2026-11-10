@@ -52,4 +52,4 @@ EOF
 
 sudo apt-get update
 
-sudo apt-get install firefox firefox-l10n-pt-br
+sudo apt-get -y install firefox firefox-l10n-pt-br
